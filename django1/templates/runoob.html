@@ -1,0 +1,47 @@
+{%extends 'base.html' %}
+
+{% block mainbody %}
+<p>集成了base.html文件</p>
+
+{% load my_tags %}
+<!--<h1>{{ name|date:"Y-m-d" }}</h1>-->
+<!--<h2>{{ views|upper }}</h2>-->
+<!--<h3>{{ links|safe }}</h3>-->
+{% csrf_token %}
+<!--{% if num > 90 and num <= 100 %}-->
+<!--优秀-->
+<!--{% elif num > 60 and num <= 90 %}-->
+<!--良好-->
+<!--{% else %}-->
+<!--不及格-->
+<!--{% endif %}-->
+
+{% for i in views reversed %}
+    {{ i }}
+{% endfor %}
+
+<!--{% for k,v in view_dict.items %}-->
+<!--    <li>{{ k }}&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;{{ v }}</li>-->
+<!--    {{ forloop.counter }}-->
+<!--    {{ forloop.first }}-->
+<!--{% empty %}-->
+<!--    没了-->
+<!--{% endfor %}-->
+
+{% ifequal num1 num2 %}
+=
+{% else %}
+!=
+{% endifequal %}
+
+{# 注释 #}
+
+{% include 'other.html' %}
+
+{{ num1|my_filter:num2 }} {# 88*128 11264 #}
+
+
+
+{% my_tag2 num1 num2 %}
+
+{% endblock %}

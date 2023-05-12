@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/plugins/node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+ <h1>
+     {% load static%}
+     {{ num1 }}
+     <img decoding="async" src="{% static '/images/pic1.jpg' %}" alt="logo" width="100px" height="100px">
+ </h1>
+</body>
+</html>

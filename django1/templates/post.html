@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>poooost</title>
+</head>
+<body>
+<form method="post" action="/search_post/">
+  {% csrf_token %}
+  <input type="input" name="q">
+  <input type="submit" name="搜索">
+</form>
+
+<p>{{rlt}}</p>
+</body>
+</html>
