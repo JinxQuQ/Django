@@ -20,8 +20,14 @@ Including another URLconf
 #     path('admin/', admin.site.urls),
 # ]
 
-
 from django.conf.urls import url
+from django.contrib import admin
+
+# urlpatterns = [
+#     url(r'^admin/', admin.site.urls),
+# ]
+
+# from django.conf.urls import url
 
 from . import views,testdb,search,search2
 #
@@ -32,6 +38,7 @@ urlpatterns = [
     url(r'^search_form/$', search.search_form),
     url(r'^search/$', search.search),
     url(r'^search_post/$', search2.search_post),
+    url(r'^admin/', admin.site.urls),
 ]
 
 from django.urls import path
